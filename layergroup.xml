@@ -1,0 +1,19 @@
+<layerGroup>
+  <name>osm</name>
+  <title>OpenStreetMap Base</title>
+  <workspace>osm</workspace>
+  <layers>
+    <layer>ne_10m_admin_0_countries</layer>
+    <layer>ne_10m_admin_1_states_provinces_lines</layer>
+    <layer>osm_landuse_polygon</layer>
+    <layer>osm_waterway_linestring</layer>
+    <layer>osm_water_polygon</layer>
+    <layer>osm_ocean_polygon</layer>
+    <layer>osm_park_polygon</layer>
+    <layer>osm_aeroway_polygon</layer>
+    <layer>osm_building_polygon</layer>
+    <layer>ne_10m_roads</layer>
+    <layer>osm_poi_point</layer>
+    <layer>osm_highway_linestring</layer>
+  </layers>
+</layerGroup>
