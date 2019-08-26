@@ -3,17 +3,30 @@
   <title>OpenStreetMap Base</title>
   <workspace>osm</workspace>
   <layers>
-    <layer>ne_10m_admin_0_countries</layer>
-    <layer>ne_10m_admin_1_states_provinces_lines</layer>
-    <layer>osm_landuse_polygon</layer>
-    <layer>osm_waterway_linestring</layer>
-    <layer>osm_water_polygon</layer>
-    <layer>osm_ocean_polygon</layer>
-    <layer>osm_park_polygon</layer>
-    <layer>osm_aeroway_polygon</layer>
-    <layer>osm_building_polygon</layer>
-    <layer>ne_10m_roads</layer>
-    <layer>osm_poi_point</layer>
-    <layer>osm_highway_linestring</layer>
+    <layer>admin0</layer>
+    <layer>admin1</layer>
+    <layer>agriculture</layer>
+    <layer>beach</layer>
+    <layer>forest</layer>
+    <layer>grass</layer>
+    <layer>water-outline</layer>
+    <layer>water</layer>
+    <layer>ocean</layer>
+    <layer>park</layer>
+    <layer>aero-poly</layer>
+    <layer>parking-area</layer>
+    <layer>amenity-areas</layer>
+    <layer>building</layer>
+    <layer>route-tunnels</layer>
+    <layer>route-bridge-0</layer>
+    <layer>route-bridge-1</layer>
+    <layer>route-bridge-2</layer>
+    <layer>route-bridge-3</layer>
+    <layer>route-bridge-4</layer>
+    <layer>route-bridge-5</layer>
+    <layer>route-line</layer>
+    <layer>route-fill</layer>
+    <layer>placenames-medium</layer>
+    <layer>highway-label</layer>
   </layers>
 </layerGroup>
