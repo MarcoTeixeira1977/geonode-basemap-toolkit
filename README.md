@@ -1,5 +1,16 @@
 # GeoNode BaseMap Toolkit
-Required settings on top of the default docker-compose GeoNode deployment, automating stuf to create a nice OSM + Naturalearth based Basemap for GeoNode. The docker-compose files are intended to work [with my Docker homelab setup](https://github.com/ginkun/frontend-https-revproxy.git).
+Required settings on top of the default docker-compose GeoNode deployment, automating stuff to create a nice OSM based Basemap for GeoNode on a given area. The docker-compose files are intended to work [with my Docker homelab setup](https://github.com/ginkun/frontend-https-revproxy.git).
 
-## Layergroup and associated styles automated Creation into Geoserver / GeoNode. 
+It assumes that you downloaded a desired PBF file (ex: from [Geofabrik](http://download.geofabrik.de/)), renamed `import.pbf` and placed into the `osm2pgsql` directory.
+
+
+### Layergroup and associated styles automated Creation into Geoserver / GeoNode. 
 Many thanks to [this article](https://tipsforgis.wordpress.com/tag/delft/) for the initial inspiration which served as a strong base for this publication.
+
+
+### GeoNode local installation
+The `local_install` folder contains a local docker-compose automated proxy infrastructure. It assumes that the client host will resolve the `*.geonode.local` name using a hosts file. Then, all GeoNode services can be accessed through :
+- geonode.local
+- geonode.local/geoserver
+- pgadmin.geonode.local
+- portainer.geonode.local
