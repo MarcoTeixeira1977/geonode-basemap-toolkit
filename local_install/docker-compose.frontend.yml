@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  proxy:
+    build: ./proxy
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - vhost.d:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - backend
+
+  # Portainer : modify the following parameters like this :
+  #    - VIRTUAL_HOST -> the service domain name
+  portainer:
+    image: portainer/portainer:latest
+    environment:
+      - VIRTUAL_HOST=portainer.geonode.local
+      - VIRTUAL_PORT=80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data
+    networks:
+      - backend
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    volumes:
+      - '/private/var/lib/pgadmin:/var/lib/pgadmin'
+      #- '/path/to/certificate.cert:/certs/server.cert'
+      #- '/path/to/certificate.key:/certs/server.key'
+      - '/tmp/servers.json:/servers.json'
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=spgeo22@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=geonode
+      - VIRTUAL_HOST=pgadmin.geonode.local
+      - VIRTUAL_PORT=80
+
+    networks:
+      - backend
+      - geonode
+
+volumes:
+  vhost.d:
+  html:
+
+networks:
+  geonode:
+  backend:
