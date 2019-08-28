@@ -39,4 +39,4 @@ for sldfile in styles/*.sld; do
 
 done
 
-  curl -v -u $login -XPOST -d@layergroup.xml -H "Content-type: text/xml" $restapi/layergroups
+  curl -v -u $login -XPOST -d layergroup.xml -H "Content-type: text/xml" $restapi/layergroups
