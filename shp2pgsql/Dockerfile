@@ -1,5 +1,6 @@
 FROM geonode/postgis:10
-ENV IMPORT_DATA_DIR=/import
+ENV IMPORT_DATA_DIR=/import \
+    GEBCO_CLIPAREA="-5.1666 47.4083 -1.2958 49.0291"
 
 RUN mkdir -p $IMPORT_DATA_DIR
 RUN apt-get update \
