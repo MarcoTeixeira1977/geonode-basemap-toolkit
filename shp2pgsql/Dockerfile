@@ -17,6 +17,6 @@ RUN wget --quiet https://opendem.info/downloads/gebco_derived_polygons.zip \
 
 WORKDIR ${IMPORT_DATA_DIR}
 RUN ogr2ogr -f 'ESRI Shapefile' gebco_derived_polygons_cropped.shp gebco_derived_polygons.shp \
-    && ogr2ogr -f 'ESRI Shapefile' gebco_derived_contours_cropped.shp gebco_derived_contours.shp
+    && ogr2ogr -f 'ESRI Shapefile' gebco_derived_contours_cropped.shp gebco_derived_contours.shp 
 
 CMD ["./import-gebco.sh"]
