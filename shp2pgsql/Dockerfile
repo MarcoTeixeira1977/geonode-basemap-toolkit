@@ -8,9 +8,9 @@ RUN apt-get update \
     unzip \
     gdal-bin
 
-RUN wget https://opendem.info/downloads/gebco_derived_polygons.zip --no-check-certificate\
+RUN wget https://opendem.info/downloads/gebco_derived_polygons.zip --quiet --no-check-certificate\
     && unzip -oj  gebco_derived_polygons.zip -d $IMPORT_DATA_DIR 
-RUN wget https://opendem.info/downloads/gebco_derived_contours.zip --no-check-certificate\
+RUN wget https://opendem.info/downloads/gebco_derived_contours.zip --quiet --no-check-certificate\
     && unzip -oj gebco_derived_contours.zip -d $IMPORT_DATA_DIR 
 
 WORKDIR ${IMPORT_DATA_DIR}
