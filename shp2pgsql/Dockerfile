@@ -9,9 +9,9 @@ RUN apt-get update \
     gdal-bin
 
 RUN wget https://opendem.info/downloads/gebco_derived_polygons.zip --quiet --no-check-certificate\
-    && unzip -oj  gebco_derived_polygons.zip -d $IMPORT_DATA_DIR 
+    && unzip -d $IMPORT_DATA_DIR -oj gebco_derived_polygons.zip gebco_derived_polygons.shp
 RUN wget https://opendem.info/downloads/gebco_derived_contours.zip --quiet --no-check-certificate\
-    && unzip -oj gebco_derived_contours.zip -d $IMPORT_DATA_DIR 
+    && unzip -d $IMPORT_DATA_DIR -oj gebco_derived_contours.zip gebco_derived_polygons.shp
 
 WORKDIR ${IMPORT_DATA_DIR}
 RUN ogr2ogr -f 'ESRI Shapefile' gebco_derived_polygons_cropped.shp gebco_derived_polygons.shp -clipsrc ${GEBCO_CLIPAREA}\
