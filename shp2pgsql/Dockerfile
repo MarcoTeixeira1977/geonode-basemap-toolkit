@@ -11,7 +11,7 @@ RUN apt-get update \
 RUN wget --quiet https://opendem.info/downloads/gebco_derived_polygons.zip \
     && unzip -oj  gebco_derived_polygons.zip -d $IMPORT_DATA_DIR \
     && wget --quiet https://opendem.info/downloads/gebco_derived_contours.zip \
-    && unzip -oj gebco_derived_contours.zip -d $IMPORT_DATA_DIR \
+    && unzip -oj gebco_derived_contours.zip -d $IMPORT_DATA_DIR 
 
 WORKDIR ${IMPORT_DATA_DIR}
 RUN ogr2ogr -f 'ESRI Shapefile' gebco_derived_polygons_cropped.shp gebco_derived_polygons.shp -clipsrc ${GEBCO_CLIPAREA}\
