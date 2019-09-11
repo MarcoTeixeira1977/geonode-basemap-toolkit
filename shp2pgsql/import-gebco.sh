@@ -5,6 +5,9 @@ set -o nounset
 
 readonly GEBCO_POLYGONS_FILE="$IMPORT_DATA_DIR/gebco_derived_polygons_cropped.shp"
 readonly GEBCO_CONTOURS_FILE="$IMPORT_DATA_DIR/gebco_derived_contours_cropped.shp"
+readonly COAST_LINES_FILE="$IMPORT_DATA_DIR/lines_cropped.shp"
+readonly COAST_LAND_FILE="$IMPORT_DATA_DIR/land_cropped.shp"
+readonly COAST_WATER_FILE="$IMPORT_DATA_DIR/water_cropped.shp"
 
 function exec_psql() {
     PGPASSWORD=$POSTGRES_PASSWORD psql --host="$POSTGRES_HOST" --port="$POSTGRES_PORT" --dbname="$POSTGRES_DB" --username="$POSTGRES_USER"
@@ -28,13 +31,25 @@ function drop_table() {
 
 
 function import_gebco_bathy() {
-    local table_name="gebco_polygon"
-    drop_table "$table_name"
-    import_shp "$GEBCO_POLYGONS-FILE" "$table_name"
+#    local table_name="coast_gebco_polygon"
+#    drop_table "$table_name"
+#    import_shp "$GEBCO_POLYGONS_FILE" "$table_name"
 
-    local table_name="gebco_contours"
+#    local table_name="coast_gebco_contours"
+#    drop_table "$table_name"
+#    import_shp "$GEBCO_CONTOURS_FILE" "$table_name"
+
+    local table_name="coast_osm_lines"
     drop_table "$table_name"
-    import_shp "$GEBCO_POLYGONS-FILE" "$table_name"
+    import_shp "$COAST_LINES_FILE" "$table_name"
+
+#    local table_name="coast_osm_land"
+#    drop_table "$table_name"
+#    import_shp "$COAST_LAND_FILE" "$table_name"
+
+#    local table_name="coast_osm_water"
+#    drop_table "$table_name"
+#    import_shp "$COAST_WATER_FILE" "$table_name"
 }
 
 import_gebco_bathy
