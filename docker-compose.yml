@@ -98,7 +98,7 @@ services:
       - '/tmp/servers.json:/servers.json'
     environment:
       - PGADMIN_DEFAULT_EMAIL=patrice.mauny@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=x2a3429kuz
+      - PGADMIN_DEFAULT_PASSWORD=blabla
       - VIRTUAL_HOST=geonode-pgadmin.domokun.fr
       - VIRTUAL_PORT=80
       - LETSENCRYPT_HOST=genode-pgadmin.domokun.fr
