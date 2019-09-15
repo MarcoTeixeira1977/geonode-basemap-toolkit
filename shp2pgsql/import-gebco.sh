@@ -16,7 +16,7 @@ function exec_psql() {
 function import_shp() {
     local shp_file=$1
     local table_name=$2
-    shp2pgsql -s 3857 -I -g geometry "$shp_file" "$table_name" | exec_psql | hide_inserts
+    shp2pgsql -s 4326 -I -g geometry "$shp_file" "$table_name" | exec_psql | hide_inserts
 }
 
 function hide_inserts() {

@@ -268,7 +268,7 @@ CREATE TABLE "water-outline" AS (
   SELECT "natural", "landuse", "waterway", "way"
   FROM planet_osm_polygon
   WHERE "natural" IN ('lake','water')
-  OR "waterway" IN ('canal','mill_pond','riverbank')
+  OR "waterway" IN ('canal','mill_pond','riverbank','river','stream','drain','ditch')
   OR "landuse" IN ('basin','reservoir','water')
   ORDER BY z_order ASC
 );
@@ -279,8 +279,8 @@ DROP TABLE IF EXISTS "water";
 CREATE TABLE "water" AS ( 
   SELECT "natural", "landuse", "waterway", "way"
   FROM planet_osm_polygon
-  WHERE "natural" IN ('lake','water')
-  OR "waterway" IN ('canal','mill_pond','riverbank')
+  WHERE "natural" IN ('lake','water','bay')
+  OR "waterway" IN ('canal','mill_pond','riverbank','river','stream','drain','ditch')
   OR "landuse" IN ('basin','reservoir','water')
   ORDER BY z_order asc
 );
