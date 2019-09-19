@@ -3,7 +3,7 @@
    - Catch starting point (X1,Y1)
    - Setup a buildings polygons table from buildings table (select way from public.buildings), and 
    Filter out the polygons further than the horizon, so we limit the next calculi to the polygons of interest only.
-   - 
+   - Source : https://abelvm.github.io/sql/isovists/
 
 */
 
