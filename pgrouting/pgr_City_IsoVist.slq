@@ -1,7 +1,9 @@
 /*
 19/09/2019 : TODO :
    - Catch starting point (X1,Y1)
-   - Setup a buildings polygons table from buildings table (select way from public.buildings)
+   - Setup a buildings polygons table from buildings table (select way from public.buildings), and 
+   Filter out the polygons further than the horizon, so we limit the next calculi to the polygons of interest only.
+   - 
 
 */
 
@@ -32,6 +34,7 @@ BEGIN
     END IF;
 
     WITH
+    /* Replace with proper buildings selection within a given radius :
     buildings_0 AS(
 		-- Unnest the polygons array to have a table object
         SELECT
@@ -49,6 +52,7 @@ BEGIN
         UNION ALL
         SELECT ST_buffer(center::geography, radius)::geometry as geom
     ),
+    */
     rays AS(
         SELECT
             t.n as id,
