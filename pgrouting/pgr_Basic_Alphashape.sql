@@ -10,7 +10,7 @@ WITH alphashape AS (
     SELECT pgr_alphashape('
         WITH dd AS (
             SELECT * FROM pgr_drivingDistance(
-                ''SELECT gid as id, source, target, cost FROM public.ways'', 2, 0.05
+                ''SELECT gid as id, source, target, cost FROM public.ways'', 6000, 0.05
             )
         ),
         dd_points AS (
@@ -27,5 +27,4 @@ alphapoints AS (
 alphaline AS (
     SELECT ST_MakeLine(ST_MakePoint) FROM alphapoints
 )
-SELECT ST_MakePolygon(ST_AddPoint(ST_MakeLine, ST_StartPoint(ST_MakeLine)))
-FROM alphaline;
+SELECT 1 as id, ST_SetSRID(ST_MakePolygon(ST_AddPoint(ST_MakeLine, ST_StartPoint(ST_MakeLine))), 4326) AS the_geom FROM alphaline;
