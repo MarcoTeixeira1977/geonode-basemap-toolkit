@@ -35,10 +35,5 @@ isochrones 2 : https://georepublic.info/de/blog/2017/catchment-area-calculation-
 isochrones 3 : https://anitagraser.com/2011/09/25/a-closer-look-at-alpha-shapes-in-pgrouting/
 isochrones 4 : https://anitagraser.com/2011/05/13/catchment-areas-with-pgrouting-driving_distance/
 
-
-
-
-
-
-
+WPS : pyWPS + http://initd.org/psycopg/docs/ psycopg library
 
