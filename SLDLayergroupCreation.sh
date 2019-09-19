@@ -4,7 +4,7 @@
 #     Assuming that your have a PostGIS database containing 
 #     a full OSM dump on the desired area
 #
-restapi=http://172.23.0.3:8080/geoserver/rest
+restapi=http://172.20.0.5:8080/geoserver/rest
 login=admin:geoserver
 workspace=geonode
 store=GeoNode_PostGIS
