@@ -12,11 +12,11 @@ services:
       - VIRTUAL_HOST=mviewer.geonode.local
       - VIRTUAL_PORT=80
     networks:
-      - default
+      - geonode
       - backend
 
 networks:
-  default:
+  geonode:
     external:
       #Replace here the backend network name obtained from sudo docker network ls
       name: geonode_geonode
