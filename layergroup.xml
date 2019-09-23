@@ -11,6 +11,7 @@
     <layer>grass</layer>
     <layer>water-outline</layer>
     <layer>water</layer>
+    <layer>water-rivers</layer>
     <layer>ocean</layer>
     <layer>park</layer>
     <layer>aero-poly</layer>

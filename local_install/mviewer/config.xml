@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<metadata>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description rdf:about="http://www.ilrt.bristol.ac.uk/people/cmdjb/">
+<dc:title>SPGeo-22</dc:title>
+<dc:creator>anonymous</dc:creator>
+<dc:publisher>anonymous</dc:publisher>
+<dc:subject>Services WPS</dc:subject>
+<dc:subject>Météo</dc:subject>
+<dc:subject>Services de calculs</dc:subject>
+<dc:date>2019-09-23T15:08:22.911Z</dc:date>
+</rdf:Description>
+</rdf:RDF>
+</metadata>
+<application
+    title="SPGeo-22"
+    logo=""
+    help=""
+    style="css/themes/default.css"
+    exportpng="true"
+    showhelp="true"
+    coordinates="true"
+    measuretools="true"
+    togglealllayersfromtheme="true"
+    hideprotectedlayers="true">
+</application>
+<mapoptions maxzoom="20" projection="EPSG:3857" center="-307903.74898791354,6141345.088741366" zoom="7" />
+<proxy url='../proxy/?url='/>
+<searchparameters bbox="false" localities="false" features="false" static="false"/>
+<baselayers style="default"> 
+    <baselayer visible="true" id="positron" thumbgallery="img/basemap/positron.png" title="CartoDb" label="Positron" type="OSM" url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://cartodb.com/attributions&quot;&gt;CartoDb&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"  ></baselayer> 
+</baselayers>
+<themes mini="false"> 
+    <theme id="theme-20190923165612" name="Services WPS" collapsed="false" icon="fas fa-globe"> 
+    </theme> 
+    <theme id="theme-20190923165640" name="Météo" collapsed="true" icon="fas fa-umbrella"> 
+    </theme> 
+    <theme id="theme-20190923165655" name="Services de calculs" collapsed="true" icon="fas fa-road"> 
+    </theme> 
+</themes>
+</config>

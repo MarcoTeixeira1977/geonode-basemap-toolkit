@@ -285,7 +285,17 @@ CREATE TABLE "water" AS (
   ORDER BY z_order asc
 );
 
-CREATE INDEX "water_way_idx" ON "water" USING gist (way);
+CREATE INDEX "water_way_poly_idx" ON "water" USING gist (way);
+
+DROP TABLE IF EXISTS "water-rivers";
+CREATE TABLE "water-rivers" AS (
+  SELECT "natural", "landuse", "waterway", "way"  FROM planet_osm_line 
+  WHERE "waterway" IN ('canal','river','stream','drain','ditch')
+  OR "landuse" IN ('water')
+  ORDER BY z_order asc
+);
+
+CREATE INDEX "water_way_lines_idx" ON "water-rivers" USING gist (way);
 
 DROP TABLE IF EXISTS "wetland";
 CREATE TABLE "wetland" AS (
