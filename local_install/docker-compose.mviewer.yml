@@ -13,9 +13,11 @@ services:
       - VIRTUAL_PORT=80
     networks:
       - default
+      - backend
 
 networks:
   default:
     external:
       #Replace here the backend network name obtained from sudo docker network ls
       name: geonode_geonode
+  backend:
