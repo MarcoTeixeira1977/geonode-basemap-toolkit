@@ -3,6 +3,7 @@ version: '3'
 services:
   web:
     build: ./mviewer
+    container_name: mviewer4geonode
     restart: always
     # Modify the following parameters like this :
     #    - VIRTUAL_HOST -> the service domain name

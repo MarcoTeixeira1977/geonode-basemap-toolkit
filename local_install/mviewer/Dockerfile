@@ -8,8 +8,7 @@ RUN apk update \
 
 RUN mkdir /usr/share/nginx/mviwer \
     && git clone https://github.com/geobretagne/mviewer.git /usr/share/nginx/mviewer --quiet \ 
-    && nginx -t \
-    && rc-update add nginx default
+    && nginx -t 
 
 EXPOSE 80
 ENTRYPOINT ["nginx","-g","daemon off;"]
