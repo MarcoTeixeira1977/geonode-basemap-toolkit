@@ -1,0 +1,39 @@
+DEM: elevqtion .
+https://pdfslide.net/documents/advanced-spatial-analysis-with-postgis-foss4g-spatial-analysis-with-postgis.html
+
+Bycicle routing
+http://themagiscian.com/2016/11/28/dem-slope-calculations-bicycle-routing-postgis/
+
+Elevatoin profile starting 6.1
+https://github.com/pedrogit/postgis_workshop/blob/master/postgis_workshop.sql
+
+Intersection line + DEM
+https://gis.stackexchange.com/questions/115536/intersection-of-a-vector-linestring-and-underlying-dem
+
+Geoserver process chaining
+https://docs.geoserver.org/latest/en/user/services/wps/processes/chaining.html
+
+[OK] ISOVISTS
+https://abelvm.github.io/sql/isovists/
+
+[WIP] Isochrone
+http://kartenn.region-bretagne.fr/kartoviz/?config=demo/isochrones.xml
+
+[WIP] Openlayers pgRouting
+https://workshop.pgrouting.org/2.5/en/chapters/ol_client.html
+
+Temps moyen depuis la gare de Rennes
+https://diouck.wordpress.com/2014/10/01/postgispgrouting-temps-moyen-dacces-a-la-gare-de-rennes/
+complément : https://diouck.wordpress.com/postgispgrouting/
+
+WPS : intersection Geoserver Rennes
+https://www.geomatick.com/2019/04/09/web-processing-service-wps-geoserver-postgresql-postgis-jsts-openlayers-representations-dune-intersection-en-webmapping-1/
+
+pgRouting : isochrones
+https://www.zimmi.cz/posts/2017/routing-with-pgrouting-catchment-area-calculation/
+isochrones 2 : https://georepublic.info/de/blog/2017/catchment-area-calculation-with-pgrouting/
+isochrones 3 : https://anitagraser.com/2011/09/25/a-closer-look-at-alpha-shapes-in-pgrouting/
+isochrones 4 : https://anitagraser.com/2011/05/13/catchment-areas-with-pgrouting-driving_distance/
+
+WPS : pyWPS + http://initd.org/psycopg/docs/ psycopg library
+
