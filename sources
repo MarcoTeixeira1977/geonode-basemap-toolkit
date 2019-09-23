@@ -13,13 +13,13 @@ https://gis.stackexchange.com/questions/115536/intersection-of-a-vector-linestri
 Geoserver process chaining
 https://docs.geoserver.org/latest/en/user/services/wps/processes/chaining.html
 
-ISOVISTS
+[OK] ISOVISTS
 https://abelvm.github.io/sql/isovists/
 
-Isochrone
+[WIP] Isochrone
 http://kartenn.region-bretagne.fr/kartoviz/?config=demo/isochrones.xml
 
-Openlayers pgRouting
+[WIP] Openlayers pgRouting
 https://workshop.pgrouting.org/2.5/en/chapters/ol_client.html
 
 Temps moyen depuis la gare de Rennes
