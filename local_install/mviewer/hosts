@@ -1,0 +1,6 @@
+127.0.0.1 localhost
+127.0.0.1 geonode
+127.0.0.1 geonode.local
+127.0.0.1 portainer.geonode.local
+127.0.0.1 pgadmin.geonode.local
+
