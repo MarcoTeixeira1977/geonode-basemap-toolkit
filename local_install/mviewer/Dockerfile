@@ -7,7 +7,7 @@ RUN apk update \
     && apk add --no-cache bash git openssh
 
 RUN mkdir /usr/share/nginx/mviwer \
-    && git clone https://github.com/geobretagne/mviewer.git /usr/share/nginx/html --quiet \ 
+    && git clone https://github.com/geobretagne/mviewer.git /usr/share/nginx/mviewer --quiet \ 
     && chown -R www:www /usr/share/nginx/mviewer \
     && nginx -t \
     && rc-update add nginx default
