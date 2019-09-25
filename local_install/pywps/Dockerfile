@@ -1,5 +1,6 @@
 FROM alpine:latest
 
+RUN echo "http://mirror.leaseweb.com/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk add --no-cache \
 	git \
 	gcc \
