@@ -17,12 +17,11 @@ RUN apk add --no-cache \
     geos-dev
 
 RUN git clone https://github.com/geopython/pywps-demo.git
+RUN pip3 install --nobinary pyproj
  
 WORKDIR /pywps-demo
 RUN pip3 install --upgrade pip \
-    && sed -i '/pyproj/d' ./requirements.txt \
-    && pip3 install -r requirements.txt \
-    && pip3 install --nobinary pyproj
+    && pip3 install -r requirements.txt
  
 EXPOSE 5000 
 ENTRYPOINT ["/usr/bin/python3", "demo.py","-a"]
