@@ -5,7 +5,7 @@ services:
     image: pywps/gunicorn-alpine:latest
     container_name: pywps4geonode
     restart: always
-    Modify the following parameters like this :
+    #Modify the following parameters like this :
     #    - VIRTUAL_HOST -> the service domain name
     #    - VIRTUAL_PORT -> 80
     environment:
