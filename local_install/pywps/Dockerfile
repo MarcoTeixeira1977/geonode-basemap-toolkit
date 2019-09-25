@@ -17,7 +17,7 @@ RUN apk add --no-cache \
     geos-dev
 
 RUN git clone https://github.com/geopython/pywps-demo.git
-RUN pip3 install pyproj --nobinary pyproj
+RUN pip3 install pyproj --no-binary pyproj
  
 WORKDIR /pywps-demo
 RUN pip3 install --upgrade pip \
