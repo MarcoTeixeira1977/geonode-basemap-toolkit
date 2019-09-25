@@ -11,7 +11,9 @@ RUN apk add --no-cache \
 	python3-dev \
 	libxml2-dev  \
 	libxslt-dev \
-	linux-headers
+	linux-headers \
+    libc-dev \
+    geos-dev
 
 RUN git clone https://github.com/geopython/pywps-demo.git
  
