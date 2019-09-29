@@ -32,6 +32,7 @@ services:
       - data-dir-conf
     volumes:
       - geoserver-data-dir:/geoserver_data/data
+      - geoserver-libs-dir:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib 
     env_file:
       - ./scripts/docker/env/${SET_DOCKER_ENV}/geoserver.env
     networks:
@@ -82,6 +83,7 @@ services:
 
   pgadmin4:
     image: dpage/pgadmin4
+    container_name: pgadmin4${COMPOSE_PROJECT_NAME}
     volumes:
       - '/private/var/lib/pgadmin:/var/lib/pgadmin'
       #- '/path/to/certificate.cert:/certs/server.cert'
@@ -149,6 +151,8 @@ volumes:
     name: ${COMPOSE_PROJECT_NAME}-statics
   geoserver-data-dir:
     name: ${COMPOSE_PROJECT_NAME}-gsdatadir
+  geoserver-libs-dir:
+    name: ${COMPOSE_PROJECT_NAME}-gslibsdir
   dbdata:
     name: ${COMPOSE_PROJECT_NAME}-dbdata
   dbbackups:

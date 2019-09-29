@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  pywps:
+    build: ./pywps
+    container_name: pywps4geonode
+    restart: always
+    env_file: .imports_pywps_env
+    volumes:
+      - pywps_logs:/pywps-flask/logs
+      - pywps_output:/pywps-flask/outputs
+      - pywps_processes:/pywps-flask/processes
+    networks:
+      - backend
+      - geonode
+
+  mviewer:
+    build: ./mviewer
+    container_name: mviewer4geonode
+    restart: always
+    # Modify the following parameters like this :
+    #    - VIRTUAL_HOST -> the service domain name
+    #    - VIRTUAL_PORT -> 80
+    environment:
+      - VIRTUAL_HOST=mviewer.geonode.local
+      - VIRTUAL_PORT=80
+    volumes:
+      - mviewer:/usr/share/nginx/mviewer/
+    networks:
+      - geonode
+      - backend
+
+networks:
+  geonode:
+    external:
+      #Replace here the geonode network name obtained from sudo docker network ls
+      name: geonode_geonode
+  backend:   
+    external:
+      #Replace here the backend network name
+      name: localinstall_backend
+
+volumes:
+  mviewer:
+  pywps_logs:
+  pywps_output:
+  pywps_processes:
