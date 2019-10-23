@@ -147,6 +147,8 @@ services:
       - geoserver-data-dir:/geoserver_data/data
     networks:
       - geonode
+  
+  
 
 volumes:
   statics:

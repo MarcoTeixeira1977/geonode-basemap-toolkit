@@ -3,4 +3,5 @@
 127.0.0.1 geonode.local
 127.0.0.1 portainer.geonode.local
 127.0.0.1 pgadmin.geonode.local
+127.0.0.1 tileserver.geonode.local
 
