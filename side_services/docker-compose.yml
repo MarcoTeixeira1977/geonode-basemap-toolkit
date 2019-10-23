@@ -29,6 +29,22 @@ services:
     networks:
       - geonode
       - backend
+  
+  tileserver-gl:
+    build: ./tileserver-gl
+    container_name: tileserver4geonode
+    restart: always
+    # Modify the following parameters like this :
+    #    - VIRTUAL_HOST -> the service domain name
+    #    - VIRTUAL_PORT -> 80
+    environment:
+      - VIRTUAL_HOST=tileserver.geonode.local
+      - VIRTUAL_PORT=80
+    volumes:
+      - tiles-data:/data
+    networks:
+      - geonode
+      - backend
 
 networks:
   geonode:
@@ -41,6 +57,7 @@ networks:
       name: localinstall_backend
 
 volumes:
+  tiles-data:
   mviewer:
   pywps_logs:
   pywps_output:
