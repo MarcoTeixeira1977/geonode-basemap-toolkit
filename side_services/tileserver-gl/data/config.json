@@ -1,61 +1,48 @@
 {
-    "options": {
-      "paths": {
-        "root": "/usr/src/app/node_modules/tileserver-gl-styles",
-        "fonts": "fonts",
-        "styles": "styles",
-        "mbtiles": "/data"
-      },
-      "serveStaticMaps": true,
-      "formatQuality": {
-        "jpeg": 90,
-        "webp": 90
-      },
-      "maxSize": 8192,
-      "pbfAlias": "pbf"
+  "options": {
+    "paths": {
+      "root": "/usr/src/app/node_modules/tileserver-gl-styles",
+      "fonts": "fonts",
+      "styles": "styles",
+      "mbtiles": "/data"
     },
-    "styles": {
-      "klokantech-basic": {
-        "style": "klokantech-basic/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
-      },
-      "osm-bright": {
-        "style": "osm-bright/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
-      },
-      "dark-matter": {
-        "style": "/data/styles/dark-matter-gl-style/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
-      },
-      "fjord-color": {
-        "style": "/data/styles/fiord-color-gl-style/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
-      },
-      "positron": {
-        "style": "/data/styles/positron-gl-style/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
-      },
-      "toner-gl-style": {
-        "style": "/data/styles/toner-gl-style/style.json",
-        "tilejson": {
-          "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-        }
+    "serveStaticMaps": true,
+    "formatQuality": {
+      "jpeg": 90,
+      "webp": 90
+    },
+    "maxSize": 8192,
+    "pbfAlias": "pbf"
+  },
+  "styles": {
+    "klokantech-basic": {
+      "style": "klokantech-basic/style.json",
+      "tilejson": {
+        "bounds": [-6.3, 41.27688, 9.8, 51.32937]
       }
     },
-    "data": {
-      "v3": {
-        "mbtiles": "tiles.mbtiles"
+    "osm-bright": {
+      "style": "osm-bright/style.json",
+      "tilejson": {
+        "bounds": [-6.3, 41.27688, 9.8, 51.32937]
+      }
+    },
+    "dark-matter": {
+      "style": "/data/styles/dark-matter-gl-style/style.json",
+      "tilejson": {
+        "bounds": [-6.3, 41.27688, 9.8, 51.32937]
+      }
+    },
+    "positron": {
+      "style": "/data/styles/positron-gl-style/style.json",
+      "tilejson": {
+        "bounds": [-6.3, 41.27688, 9.8, 51.32937]
       }
     }
+  },
+  "data": {
+    "v3": {
+      "mbtiles": "tiles.mbtiles"
+    }
   }
-  
+}
