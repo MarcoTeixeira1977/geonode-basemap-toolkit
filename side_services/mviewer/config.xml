@@ -29,10 +29,10 @@
 <proxy url='../proxy/?url='/>
 <searchparameters bbox="false" localities="false" features="false" static="false"/>
 <baselayers style="default"> 
-    <baselayer visible="true" id="osm-bright" thumbgallery="img/osm-bright.png" format="png" title="OSM Bright" label="OSM Bright" type="WMTS" url="http://tileserver.geonode.local/wmts/osm-bright/wmts.xml" attribution="OpenMapTiles"></baselayer> 
-    <baselayer visible="false" id="klokantech-basic" thumbgallery="img/klokantech-basic.png" format="png" title="Klokantech Basic" label="Klokantech Basic" type="WMTS" url="http://tileserver.geonode.local/wmts/klokantech-basic/wmts.xml" attribution="OpenMapTiles"></baselayer> 
-    <baselayer visible="false" id="dark-matter" thumbgallery="img/dark-matter.png" format="png" title="Dark Matter" label="Dark Matter" type="WMTS" url="http://tileserver.geonode.local/wmts/dark-matter/wmts.xml" attribution="OpenMapTiles"></baselayer> 
-    <baselayer visible="false" id="positron" thumbgallery="img/positron.png" format="png" title="Positron" label="Positron" type="WMTS" url="http://tileserver.geonode.local/wmts/positron/wmts.xml" attribution="OpenMapTiles"></baselayer>
+    <baselayer visible="true" id="osm-bright" thumbgallery="img/osm-bright.png" format="image/png" title="OSM Bright" label="OSM Bright" type="WMTS" url="http://tileserver.geonode.local/styles/osm-bright/wmts.xml" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="false" id="klokantech-basic" thumbgallery="img/klokantech-basic.png" format="image/png" title="Klokantech Basic" label="Klokantech Basic" type="WMTS" url="http://tileserver.geonode.local/styles/klokantech-basic/wmts.xml" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="false" id="dark-matter" thumbgallery="img/dark-matter.png" format="image/png" title="Dark Matter" label="Dark Matter" type="WMTS" url="http://tileserver.geonode.local/styles/dark-matter/wmts.xml" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="false" id="positron" thumbgallery="img/positron.png" format="image/png" title="Positron" label="Positron" type="WMTS" url="http://tileserver.geonode.local/styles/positron/wmts.xml" attribution="OpenMapTiles"></baselayer>
 </baselayers>
 <themes mini="false"> 
     <theme id="theme-20190923165612" name="Services WMS" collapsed="false" icon="fas fa-globe"> 
