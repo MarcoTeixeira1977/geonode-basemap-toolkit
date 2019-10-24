@@ -36,19 +36,6 @@
 </baselayers>
 <themes mini="false"> 
     <theme id="theme-20190923165612" name="Services WMS" collapsed="false" icon="fas fa-globe"> 
-        <layer id="rp_struct_pop_geom" name="Part de la population selon la catégorie d'âge (%)"  visible="true" tiled="false"
-		       searchable="false" queryable="true" expanded="true"
-               attributefilter="true" attributefield="level" attributevalues="Commune,EPCI"  attributelabel="Échelle" attributestylesync="true" attributefilterenabled="true"
-		       infopanel="bottom-panel"
-		       infoformat="application/vnd.ogc.gml" featurecount="5"
-		       sld="http://kartenn.region-bretagne.fr/styles/pop6074@commune.sld,http://kartenn.region-bretagne.fr/styles/pop3044@commune.sld"
-               stylesalias="60 - 74 ans,30 - 44 ans"
-		       url="https://ows.region-bretagne.fr/geoserver/rb/wms"
-		       attribution="Les styles (analyses) sont synchronisés avec le filtre attributaire." 
-		       metadata="https://kartenn.region-bretagne.fr/geonetwork/?uuid=26324529-e0b7-450c-9506-2dcdca608f5f"
-		       metadata-csw="https://kartenn.region-bretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=26324529-e0b7-450c-9506-2dcdca608f5f">
-		       <template url="apps/region/territoire/templates/territoire.pop.cat_age.mst"></template>
-		</layer>
     </theme> 
     <theme id="theme-20190923165640" name="Météo" collapsed="true" icon="fas fa-umbrella"> 
     </theme> 
