@@ -29,7 +29,10 @@
 <proxy url='../proxy/?url='/>
 <searchparameters bbox="false" localities="false" features="false" static="false"/>
 <baselayers style="default"> 
-    <baselayer visible="true" id="positron" thumbgallery="img/basemap/positron.png" title="CartoDb" label="Positron" type="OSM" url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://cartodb.com/attributions&quot;&gt;CartoDb&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"  ></baselayer> 
+    <baselayer visible="true" id="osm-bright" thumbgallery="img/basemap/osm-bright.png" title="OSM Bright" label="OSM Bright" type="WMTS" url="http://tileserver.geonode.local/wmts/osm-bright/" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="true" id="klokantech-basic" thumbgallery="img/basemap/klokantech-basic.png" title="Klokantech Basic" label="Klokantech Basic" type="WMTS" url="http://tileserver.geonode.local/wmts/klokantech-basic/" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="true" id="dark-matter" thumbgallery="img/basemap/dark-matter.png" title="Dark Matter" label="Dark Matter" type="WMTS" url="http://tileserver.geonode.local/wmts/dark-matter/" attribution="OpenMapTiles"></baselayer> 
+    <baselayer visible="true" id="positron" thumbgallery="img/basemap/positron.png" title="Poitron" label="Positron" type="WMTS" url="http://tileserver.geonode.local/wmts/positron/" attribution="OpenMapTiles"></baselayer>
 </baselayers>
 <themes mini="false"> 
     <theme id="theme-20190923165612" name="Services WMS" collapsed="false" icon="fas fa-globe"> 
