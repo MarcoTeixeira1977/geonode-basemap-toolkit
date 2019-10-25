@@ -10,7 +10,7 @@ RUN mkdir /usr/share/nginx/mviwer \
     && git clone https://github.com/geobretagne/mviewer.git /usr/share/nginx/mviewer --quiet \ 
     && nginx -t 
 
-COPY config.xml /usr/share/nginx/mviewer/
+COPY . /usr/share/nginx/mviewer/
 
 EXPOSE 80
 ENTRYPOINT ["nginx","-g","daemon off;"]
