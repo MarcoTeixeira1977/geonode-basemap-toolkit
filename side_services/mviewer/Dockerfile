@@ -6,7 +6,7 @@ RUN apk update \
     && apk upgrade \
     && apk add --no-cache bash git openssh
 
-RUN mkdir /usr/share/nginx/mviwer \
+RUN mkdir /usr/share/nginx/mviewer \
     && git clone https://github.com/geobretagne/mviewer.git /usr/share/nginx/mviewer --quiet \ 
     && nginx -t 
 
