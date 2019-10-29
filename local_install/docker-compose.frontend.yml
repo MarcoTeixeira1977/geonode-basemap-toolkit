@@ -4,7 +4,7 @@ services:
   proxy:
     build: ./proxy
     restart: always
-    container_name: proxy4${COMPOSE_PROJECT_NAME}
+    container_name: proxy4spgeo22
     ports:
       - 80:80
     volumes:
@@ -14,11 +14,9 @@ services:
     networks:
       - backend
 
-  # Portainer : modify the following parameters like this :
-  #    - VIRTUAL_HOST -> the service domain name
   portainer:
     image: portainer/portainer:latest
-    container_name: portainer4${COMPOSE_PROJECT_NAME}
+    container_name: portainer4spgeo22
     environment:
       - VIRTUAL_HOST=portainer.geonode.local
       - VIRTUAL_PORT=80
@@ -33,5 +31,4 @@ volumes:
   html:
 
 networks:
-  geonode:
   backend:

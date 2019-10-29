@@ -32,7 +32,9 @@ services:
       - data-dir-conf
     volumes:
       - geoserver-data-dir:/geoserver_data/data
-    env_file:
+      - geoserver-libs-dir:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib 
+      - geoserver-web-dir:/usr/local/tomcat/webapps/geoserver/WEB-INF    
+  env_file:
       - ./scripts/docker/env/${SET_DOCKER_ENV}/geoserver.env
     networks:
       - geonode
@@ -148,13 +150,16 @@ services:
     networks:
       - geonode
   
-  
 
 volumes:
   statics:
     name: ${COMPOSE_PROJECT_NAME}-statics
   geoserver-data-dir:
     name: ${COMPOSE_PROJECT_NAME}-gsdatadir
+  geoserver-libs-dir:
+    name: ${COMPOSE_PROJECT_NAME}-gslibsdir
+  geoserver-web-dir:
+    name: ${COMPOSE_PROJECT_NAME}-gswebdir
   dbdata:
     name: ${COMPOSE_PROJECT_NAME}-dbdata
   dbbackups:

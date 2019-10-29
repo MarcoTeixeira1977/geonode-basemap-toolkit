@@ -12,48 +12,36 @@ services:
       - pywps_processes:/pywps-flask/processes
     networks:
       - backend
-      - geonode
 
   mviewer:
     build: ./mviewer
     container_name: mviewer4geonode
     restart: always
-    # Modify the following parameters like this :
-    #    - VIRTUAL_HOST -> the service domain name
-    #    - VIRTUAL_PORT -> 80
     environment:
       - VIRTUAL_HOST=mviewer.geonode.local
       - VIRTUAL_PORT=80
     volumes:
       - mviewer:/usr/share/nginx/mviewer/
     networks:
-      - geonode
       - backend
   
-  tileserver-gl:
+  tileserver:
     build: ./tileserver-gl
     container_name: tileserver4geonode
     restart: always
-    # Modify the following parameters like this :
-    #    - VIRTUAL_HOST -> the service domain name
-    #    - VIRTUAL_PORT -> 80
+    expose:
+      - "80"    
     environment:
       - VIRTUAL_HOST=tileserver.geonode.local
       - VIRTUAL_PORT=80
     volumes:
       - tiles-data:/data
     networks:
-      - geonode
       - backend
 
 networks:
-  geonode:
-    external:
-      #Replace here the geonode network name obtained from sudo docker network ls
-      name: geonode_geonode
   backend:   
     external:
-      #Replace here the backend network name
       name: localinstall_backend
 
 volumes:

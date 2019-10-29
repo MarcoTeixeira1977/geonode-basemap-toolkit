@@ -35,10 +35,19 @@
     <baselayer visible="false" id="positron" thumbgallery="img/positron.png" title="OpenMapTiles" label="Positron" type="OSM" url="https://maptiles.domokun.fr/styles/positron/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://openmaptiles.com&quot;&gt;OpenMapTiles&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"  ></baselayer> 
     <baselayer visible="false" id="dark-matter" thumbgallery="img/dark-matter.png" title="OpenMapTiles" label="Dark Matter" type="OSM" url="https://maptiles.domokun.fr/styles/dark-matter/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://openmaptiles.com&quot;&gt;OpenMapTiles&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"  ></baselayer> 
     <baselayer visible="false" id="klokantech-basic" thumbgallery="img/klokantech-basic.png" title="OpenMapTiles" label="Klokantech Basic" type="OSM" url="https://maptiles.domokun.fr/styles/klokantech-basic/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://openmaptiles.com&quot;&gt;OpenMapTiles&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"  ></baselayer> 
-    <!-- <baselayer visible="false" id="geoserver-wmts" thumbgallery="img/bzh.png" title="GéoServer local" label="Cartes OSM locales" type="WMTS" url="http://geonode.local/geoserver/gwc/service/wmts" layers="geonode%3ABretagne" format="image/png" fromcapacity="false" attribution="&lt;a href='http://geonode.local/'&lt;/a&gt;" style="" matrixset="EPSG%3A3857" maxzoom="20"></baselayer> -->
+    <!--    <baselayer visible="false" id="geoserver-wmts" thumbgallery="img/bzh.png" title="GéoServer local" label="Cartes OSM locales" type="WMTS" url="http://geonode.local/geoserver/gwc/service/wmts" layers="geonode%3ABretagne" format="image/png" fromcapacity="false" attribution="&lt;a href='http://geonode.local/'&lt;/a&gt;" style="" matrixset="EPSG%3A3857" maxzoom="20"></baselayer> -->
 </baselayers>
 <themes mini="false"> 
     <theme id="theme-20191026104858" name="Démographie" collapsed="false" icon="fas fa-child"> 
+        <layer id="rp_struct_pop_geom" name="Part de la population selon la catégorie d'âge (%)" visible="true" tiled="false" searchable="false" queryable="true" 
+		expanded="true" attributefilter="true" attributefield="level" attributevalues="Commune,EPCI" attributelabel="Échelle" attributestylesync="true" 
+		attributefilterenabled="true" infopanel="bottom-panel" infoformat="application/vnd.ogc.gml" featurecount="5" 
+		style="geonode:pop6074___c51f9b70-f817-11e9-80b8-ab1397c47e00,geonode:rp_struct_pop_geom" stylesalias="60 - 74 ans,30 - 44 ans" 
+		url="http://geonode.local:80/geoserver/ows?service=WMS" attribution="Merci à l'équipe de GéoBretagne pour leur soutien sur ce thème." 
+		metadata="http://geonode.local:80/showmetadata/xsl/2" 
+		metadata-csw="http://geonode.local/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&id=06734f4c-d66f-11e9-beb8-0242ac140003"> 
+		<template url="templates/territoire.pop.cat_age.mst"/>
+	</layer>
     </theme> 
     <theme id="theme-20191026105013" name="Environnement" collapsed="false" icon="fab fa-envira"> 
     </theme> 

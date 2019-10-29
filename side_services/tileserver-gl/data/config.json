@@ -15,12 +15,6 @@
     "pbfAlias": "pbf"
   },
   "styles": {
-    "klokantech-basic": {
-      "style": "klokantech-basic/style.json",
-      "tilejson": {
-        "bounds": [-6.3, 41.27688, 9.8, 51.32937]
-      }
-    },
     "osm-bright": {
       "style": "osm-bright/style.json",
       "tilejson": {
