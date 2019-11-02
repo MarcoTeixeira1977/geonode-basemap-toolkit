@@ -12,6 +12,7 @@ services:
       - pywps_processes:/pywps-flask/processes
     networks:
       - backend
+      - geonode
 
   mviewer:
     build: ./mviewer
@@ -43,6 +44,9 @@ networks:
   backend:   
     external:
       name: localinstall_backend
+  geonode:
+    external:
+      name: geonode_geonode
 
 volumes:
   tiles-data:
