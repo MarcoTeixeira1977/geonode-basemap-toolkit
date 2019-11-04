@@ -1,0 +1,7 @@
+source $HOME/.override_env; \
+    echo DATABASE_URL=$DATABASE_URL; \
+    echo GEODATABASE_URL=$GEODATABASE_URL; \
+    echo SITEURL=$SITEURL; \
+    echo ALLOWED_HOSTS=$ALLO --hWED_HOSTS; \
+    echo GEOSERVER_PUBLIC_LOCATION=$GEOSERVER_PUBLIC_LOCATION; \
+    django-admin help
