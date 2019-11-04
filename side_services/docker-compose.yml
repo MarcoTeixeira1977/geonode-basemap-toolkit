@@ -6,10 +6,13 @@ services:
     container_name: pywps4geonode
     restart: always
     env_file: .imports_pywps_env
+    expose:
+      - "8081"
     volumes:
       - pywps_logs:/pywps-flask/logs
       - pywps_output:/pywps-flask/outputs
       - pywps_processes:/pywps-flask/processes
+      - pywps_wsgi:/pywps-flask/wsgi
     networks:
       - backend
       - geonode
@@ -54,3 +57,4 @@ volumes:
   pywps_logs:
   pywps_output:
   pywps_processes:
+  pywps_wsgi:
